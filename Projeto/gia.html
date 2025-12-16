@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBtech - GIA</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+  <div class="sidebar" id="sidebar">
+    <div class="profile">
+      <p id="usernameDisplay"></p>
+    </div>
+    <ul class="menu">
+      <li>Cadastros</li>
+      <li>MiStatus</li>
+      <li>Symphony</li>
+      <li>Sales Export</li>
+      <li>Preços</li>
+      <li>iFood</li>
+      <li>Rappi</li>
+      <li>Tagme</li>
+      <li class="has-submenu">
+        Ponto
+        <ul class="submenu">
+          <li>Registro de Ponto</li>
+          <li>Relatório de Pontos</li>
+          <li id="relatorioTodos" style="display:none">Relatório de Pontos (Todos)</li>
+          <li onclick="mostrarModal()">Relatório de Hora Extra</li>
+        </ul>
+      </li>
+      <li>Plano de Adega</li>
+      <li onclick="logout()">Sair</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="top-bar">
+      <button>Registro De Ponto ✖</button>
+      <button>Tabela Oficial ✖</button>
+    </div>
+
+    <div style="margin-top: 10px;">
+      <label>
+        <input type="radio" name="tipoTrabalho" value="Presencial" checked> Presencial
+      </label>
+      <label style="margin-left: 10px;">
+        <input type="radio" name="tipoTrabalho" value="Home Office"> Home Office
+      </label>
+    </div>
+
+    <div class="card-container">
+      <div class="card" onclick="registrarInicioExpediente()">
+        <span id="inicioExpediente">--:--</span>
+        <small>Início Expediente</small>
+      </div>
+      <div class="card" onclick="registrarInicioIntervalo()">
+        <span id="inicioIntervalo">--:--</span>
+        <small>Início Intervalo</small>
+      </div>
+      <div class="card" onclick="registrarRetornoIntervalo()">
+        <span id="retornoIntervalo">--:--</span>
+        <small>Retorno Intervalo</small>
+      </div>
+      <div class="card" onclick="registrarFimExpediente()">
+        <span id="fimExpediente">--:--</span>
+        <small>Fim do Expediente</small>
+      </div>
+      <div class="card" onclick="registrarInicioExtra()">
+        <span id="inicioExtra">--:--</span>
+        <small>Início Extra</small>
+      </div>
+      <div class="card" onclick="registrarFimExtra()">
+        <span id="fimExtra">--:--</span>
+        <small>Fim Extra</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="extra-modal" id="extraModal">
+    <h2>Horas Extras</h2>
+    <p>Veja aqui suas horas tanto possitiva quanto negativa <strong><span id="horasExtras" class=""></span></strong></p>
+    <button class="btn-export" onclick="exportarParaExcel()">Exportar para Excel</button>
+  <button class="btn-export" style="background-color: #e74c3c;" onclick="zerarPlanilha()">Zerar Planilha</button>
+  </div>
+
+  <script src="scrpit.js"></script>
+</body>
+</html>
