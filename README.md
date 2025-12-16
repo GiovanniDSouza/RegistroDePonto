@@ -15,7 +15,6 @@ Um site onde você pode bater o ponto e acompanhar suas horas de trabalho e hora
 
 ![image](https://github.com/user-attachments/assets/9d95b935-0306-4abd-a1f0-7cdbcc9d311c)
 
-<img width="1554" height="488" alt="image" src="https://github.com/user-attachments/assets/9d95b935-0306-4abd-a1f0-7cdbcc9d311c" />
+<img width="1550" height="535" alt="image" src="https://github.com/user-attachments/assets/0c1a72d7-b7d3-4f6d-9d78-757e8afbff13" />
 
 <img width="1092" height="462" alt="image" src="https://github.com/user-attachments/assets/1b560377-e3ef-44dd-8502-92462e7c1ddb" />
-
